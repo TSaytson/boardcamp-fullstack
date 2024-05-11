@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - pgData:/var/lib/postgresql/data
+    env_file:
+      - .env
+  api:
+    container_name: boardcamp_api
+    build: .
+    ports: 
+      - 80:8080
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+volumes:
+  pgData:
