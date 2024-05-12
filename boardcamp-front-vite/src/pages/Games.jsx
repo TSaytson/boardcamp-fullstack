@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import PageContainer from "../components/PageContainer";
 import Loading from "../components/Loading";
@@ -12,7 +12,7 @@ import * as api from "../services/games";
 export default function Customers() {
   const [games, setGames] = useState(null);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     api.list().then((games) => {
@@ -38,7 +38,7 @@ export default function Customers() {
         }}
       />
 
-      <Button onClick={() => history.push("/games/new")}>Adicionar Jogo</Button>
+      <Button onClick={() => navigate("/games/new")}>Adicionar Jogo</Button>
     </PageContainer>
   );
 }

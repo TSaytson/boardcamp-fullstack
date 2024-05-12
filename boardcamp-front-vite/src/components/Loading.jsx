@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Loader from 'react-loader-spinner';
+import {ThreeDots} from 'react-loader-spinner';
 import styled from 'styled-components';
 import useInterval from 'react-useinterval';
 
@@ -13,7 +13,7 @@ export default function Loading () {
 
   return (
     <Container>
-      <Loader type="ThreeDots" color="var(--colors-main)" height={80} width={80} />
+      <ThreeDots color="var(--colors-main)" height={80} width={80} />
       Carregando dados{ellipsis}
     </Container>
   )

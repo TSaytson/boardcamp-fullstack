@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 import PageContainer from '../components/PageContainer';
@@ -12,7 +12,7 @@ import * as api from '../services/customers';
 
 export default function Customers () {
   const [customers, setCustomers] = useState(null);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     api.list().then(customers => {
@@ -35,7 +35,7 @@ export default function Customers () {
         content={customers}
 
         onCellClick={{
-          name: row => history.push(`/customers/${row.id}`)
+          name: row => navigate(`/customers/${row.id}`)
         }}
 
         formatCellText={{
@@ -45,7 +45,7 @@ export default function Customers () {
         }}
       />
 
-      <Button onClick={() => history.push('/customers/new')}>Adicionar Cliente</Button>
+      <Button onClick={() => navigate('/customers/new')}>Adicionar Cliente</Button>
     </PageContainer>
   );
 }

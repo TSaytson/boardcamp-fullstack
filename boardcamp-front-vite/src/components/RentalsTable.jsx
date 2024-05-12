@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaHandHolding, FaTrash } from 'react-icons/fa';
 import dayjs from 'dayjs';
 
@@ -8,7 +8,7 @@ import Button from './Button';
 import * as api from '../services/rentals';
 
 export default function RentalsTable ({ rentals, onAction, ...props }) {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   function destroyRental (rentalId) {
     api.destroy(rentalId).then(() => {
@@ -42,7 +42,7 @@ export default function RentalsTable ({ rentals, onAction, ...props }) {
         content={rentals}
 
         onCellClick={{
-          'customer.name': row => history.push(`/customers/${row.customer.id}`)
+          'customer.name': row => navigate(`/customers/${row.customer.id}`)
         }}
 
         formatCellText={{

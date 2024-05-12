@@ -1,8 +1,7 @@
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Redirect,
+  Routes,
 } from "react-router-dom";
 
 
@@ -27,39 +26,38 @@ export default function App() {
       <View>
         <Sidebar />
 
-        <Switch>
-          <Route path="/" exact>
-            <Redirect to="/rentals" />
+        <Routes>
+          <Route path="/" element={<Rentals/>}>
           </Route>
 
-          <Route path="/rentals" exact>
-            <Rentals />
+          <Route path="/rentals" element={<Rentals />}>
+            
           </Route>
 
-          <Route path="/customers" exact>
-            <Customers />
+          <Route path="/customers" element={<Customers />}>
+            
           </Route>
 
-          <Route path="/games" exact>
-            <Games />
+          <Route path="/games" element={<Games />}>
+            
           </Route>
 
-          <Route path="/rentals/new" exact>
-            <NewRental />
+          <Route path="/rentals/new" element={ <NewRental />}>
+           
           </Route>
 
-          <Route path="/customers/new" exact>
-            <NewCustomer />
+          <Route path="/customers/new" element={<NewCustomer />}>
+            
           </Route>
 
-          <Route path="/customers/:customerId" exact>
-            <Customer />
+          <Route path="/customers/:customerId" element={<Customer />}>
+            
           </Route>
 
-          <Route path="/games/new" exact>
-            <NewGame />
+          <Route path="/games/new" element={<NewGame />}>
+            
           </Route>
-        </Switch>
+        </Routes>
 
         <NewRentalButton />
       </View>

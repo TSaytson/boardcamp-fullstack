@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FaHistory, FaChessBoard, FaGamepad } from "react-icons/fa";
 import { BsFillPeopleFill } from "react-icons/bs";
@@ -6,7 +6,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import logo from "../assets/images/logo.png";
 
 export default function Sidebar() {
-  const history = useHistory();
+  const navigate = useNavigate()
 
   return (
     <Container collapsed>
@@ -14,17 +14,17 @@ export default function Sidebar() {
         <img src={logo} alt="BoardCamp Logo" />
       </Logo>
 
-      <MenuItem onClick={() => history.push("/rentals")}>
+      <MenuItem onClick={() => navigate("/rentals")}>
         <FaHistory />
         Aluguéis
       </MenuItem>
 
-      <MenuItem onClick={() => history.push("/customers")}>
+      <MenuItem onClick={() => navigate("/customers")}>
         <BsFillPeopleFill />
         Clientes
       </MenuItem>
 
-      <MenuItem onClick={() => history.push("/games")}>
+      <MenuItem onClick={() => navigate("/games")}>
         <FaChessBoard />
         Jogos
       </MenuItem>

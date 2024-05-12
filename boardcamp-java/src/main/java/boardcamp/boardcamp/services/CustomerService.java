@@ -1,5 +1,7 @@
 package boardcamp.boardcamp.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import boardcamp.boardcamp.dto.CustomerDTO;
@@ -30,5 +32,9 @@ public class CustomerService {
     );
 
     return customer;
+  }
+
+  public List<CustomerModel> getCustomers(){
+    return customerRepository.findAll();
   }
 }

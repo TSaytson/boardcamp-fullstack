@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import PageContainer from "../components/PageContainer";
 
@@ -10,7 +10,7 @@ import Button from "../components/Form/Button";
 import * as api from "../services/games";
 
 export default function Customer() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
@@ -23,7 +23,7 @@ export default function Customer() {
     api
       .create(name, image, stockTotal, pricePerDay)
       .then(() => {
-        history.push("/games");
+        navigate("/games");
       })
       .catch((err) => {
         console.error(err);

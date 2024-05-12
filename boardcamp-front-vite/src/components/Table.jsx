@@ -1,4 +1,4 @@
-import Loader from 'react-loader-spinner';
+import {ThreeDots} from 'react-loader-spinner';
 import styled from 'styled-components';
 
 export default function Table ({
@@ -12,7 +12,7 @@ export default function Table ({
   height = '700px'
 }) {
   if (isLoading) return (
-    <Loader type="ThreeDots" color="var(--colors-main)" height={40} width={40} />
+    <ThreeDots color="var(--colors-main)" height={40} width={40} />
   );
 
   return (

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import Loader from 'react-loader-spinner';
+import {ThreeDots} from 'react-loader-spinner';
 
 export default function Button ({ isLoading = false, children, ...props }) {
   return (
     <StyledButton {...props}>
       {
         isLoading
-         ? <Loader type="ThreeDots" color="#FFF" height={20} width={20} />
+         ? <ThreeDots color="#FFF" height={20} width={20} />
          : children
       }
     </StyledButton>

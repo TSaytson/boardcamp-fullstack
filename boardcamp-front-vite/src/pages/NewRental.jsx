@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Select from 'react-select';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import PageContainer from '../components/PageContainer';
 
@@ -13,7 +13,7 @@ import * as gamesApi from '../services/games';
 import * as api from '../services/rentals';
 
 export default function NewRental () {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [customers, setCustomers] = useState(null);
   const [games, setGames] = useState(null);
@@ -47,7 +47,7 @@ export default function NewRental () {
     
     api.rent(chosenCustumer, chosenGame, rentDays).then(() => {
       setLoading(false);
-      history.push('/rentals');
+      navigate('/rentals');
     }).catch(err => {
       console.error(err);
       alert('Não foi possível alugar jogo!');

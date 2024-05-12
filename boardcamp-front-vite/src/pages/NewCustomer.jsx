@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import PageContainer from '../components/PageContainer';
 
@@ -10,7 +10,7 @@ import Button from '../components/Form/Button';
 import * as api from '../services/customers';
 
 export default function Customer () {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -26,7 +26,7 @@ export default function Customer () {
       cpf.replaceAll('.', '').replaceAll('-', ''),
       birthday.split('/').reverse().join('-')
     ).then(() => {
-      history.push('/customers');
+      navigate('/customers');
     }).catch(err => {
       console.error(err);
       alert('Não foi possível criar cliente!');
