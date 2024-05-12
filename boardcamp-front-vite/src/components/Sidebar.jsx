@@ -9,7 +9,7 @@ export default function Sidebar() {
   const navigate = useNavigate()
 
   return (
-    <Container collapsed>
+    <Container>
       <Logo>
         <img src={logo} alt="BoardCamp Logo" />
       </Logo>

@@ -12,7 +12,7 @@ const axiosWrapper = {};
 const queryStringBuilder = query => Object.keys(query).length ? '?' + Object.keys(query).map(k => `${k}=${query[k]}`).join('&') : '';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8080'
+  baseURL: import.meta.env.VITE_APP_API_URL
 });
 
 for (const method of methods) {
