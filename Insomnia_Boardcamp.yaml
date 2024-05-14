@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2024-05-14T14:36:04.798Z
+__export_date: 2024-05-14T21:47:15.264Z
 __export_source: insomnia.desktop.app:v8.6.0
 resources:
   - _id: req_fe6dbab56f4b4372928b21b4eaefa4c2
     parentId: fld_7013a25a52904f47adbeb6217c91e3f5
-    modified: 1715090638189
+    modified: 1715722512361
     created: 1707514240512
     url: "{{ _.uri }}/rentals"
     name: /rentals
@@ -80,7 +80,7 @@ resources:
     _type: request
   - _id: req_85a967372775469393def78b33e91951
     parentId: fld_7013a25a52904f47adbeb6217c91e3f5
-    modified: 1707653701744
+    modified: 1715723189648
     created: 1707523289972
     url: "{{ _.uri }}/rentals/2/return"
     name: /rentals/:id/return
@@ -230,7 +230,7 @@ resources:
     _type: request
   - _id: req_0d5d603d30e4459c96605738a4029c5e
     parentId: fld_0373dfe29beb4acdbe3236106b194267
-    modified: 1707653523545
+    modified: 1715722996619
     created: 1707460715001
     url: "{{ _.uri }}/customers"
     name: /customers
@@ -240,8 +240,9 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"name": "Mariana",
-        	"cpf" : "12345678910"
+        	"name": "João Alfredo",
+          "cpf": "01234567890",
+          "phone": "21999990909"
         }
     parameters: []
     headers:
@@ -262,7 +263,7 @@ resources:
     _type: request
   - _id: env_7ee4aa8584ccb821f6607d23eccc3df313a894f1
     parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
-    modified: 1715697302928
+    modified: 1715722520421
     created: 1707460110444
     name: Base Environment
     data:

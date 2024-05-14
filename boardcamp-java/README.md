@@ -15,8 +15,9 @@ The API for the lovers of board games. Boardcamp API handles REST requests for b
 ### POST /customers
 ```
 {
-  name: 'João Alfredo',
-  cpf: '01234567890'
+  "name": "João Alfredo",
+  "cpf": "01234567890",
+  "phone": "21999990909"
 }
 ```
 #### Response
@@ -53,10 +54,10 @@ The API for the lovers of board games. Boardcamp API handles REST requests for b
 ### POST /games
 ```
 {
-  name: 'Banco Imobiliário',
-  image: 'http://www.imagem.com.br/banco_imobiliario.jpg',
-  stockTotal: 3,
-  pricePerDay: 1500
+  "name": 'Banco Imobiliário',
+  "image": 'http://www.imagem.com.br/banco_imobiliario.jpg',
+  "stockTotal": 3,
+  "pricePerDay": 1500
 }
 ```
 #### Response
@@ -100,9 +101,9 @@ The API for the lovers of board games. Boardcamp API handles REST requests for b
 ### POST /rentals
 ```
 {
-  customerId: 1,
-  gameId: 1,
-  daysRented: 3
+  "customerId": 1,
+  "gameId": 1,
+  "daysRented": 3
 }
 ```
 #### Response
@@ -129,6 +130,8 @@ The API for the lovers of board games. Boardcamp API handles REST requests for b
   }
 ```
 ### PUT /rentals/:rentalId/return
+
+#### Response
 ```
 {
     id: 1,
