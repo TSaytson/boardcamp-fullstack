@@ -15,6 +15,8 @@ const instance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_URL
 });
 
+console.log(import.meta.env.VITE_APP_API_URL)
+
 for (const method of methods) {
   axiosWrapper[method] = async function (route, body, query = {}, complete = false) {
     try {

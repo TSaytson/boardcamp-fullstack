@@ -21,6 +21,7 @@ public class CustomerModel {
   public CustomerModel(CustomerDTO customer){
     this.cpf = customer.getCpf();
     this.name = customer.getName();
+    this.phone = customer.getPhone();
   }
 
   @Id
@@ -33,4 +34,6 @@ public class CustomerModel {
   @Column(length = 11, nullable = false, unique = true)
   private String cpf;
   
+  @Column(length = 11, nullable = false, unique = true)
+  private String phone;
 }

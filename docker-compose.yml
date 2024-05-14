@@ -11,9 +11,9 @@ services:
       - ./boardcamp-java/.env
 
   api:
-    container_name: boardcamp_api
+    container_name: api
     build: ./boardcamp-java
-    ports: 
+    ports:
       - 5000:8080
     env_file:
       - ./boardcamp-java/.env

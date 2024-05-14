@@ -47,7 +47,7 @@ public class CustomerUnitTests {
 
   @Test
   void givenUniqueCustomer_whenCreatingCustomer_thenReturnCreatedCustomer(){
-    CustomerDTO customerDTO = new CustomerDTO("name", "cpf");
+    CustomerDTO customerDTO = new CustomerDTO("name", "cpf", "phone");
     CustomerModel customerModel = new CustomerModel(customerDTO);
     doReturn(false).when(customerRepository).existsByCpf(any());
     doReturn(customerModel).when(customerRepository).save(any());

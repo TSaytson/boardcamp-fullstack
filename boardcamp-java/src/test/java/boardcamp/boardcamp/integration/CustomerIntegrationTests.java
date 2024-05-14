@@ -36,7 +36,7 @@ public class CustomerIntegrationTests {
 
   @Test
   void givenExistentCustomer_whenCreatingCustomer_thenThrowsError() {
-    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900");
+    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900", "22997042956");
     CustomerModel createdCustomer = new CustomerModel(customerDTO);
     customerRepository.save(createdCustomer);
 
@@ -54,7 +54,7 @@ public class CustomerIntegrationTests {
 
   @Test
   void givenUniqueCustomer_whenCreatingCustomer_thenSendCreatedCustomer() {
-    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900");
+    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900", "22997042956");
 
     HttpEntity<CustomerDTO> body = new HttpEntity<>(customerDTO);
 
@@ -72,7 +72,7 @@ public class CustomerIntegrationTests {
 
   @Test
   void givenInvalidCustomerId_whenFindingCustomerById_thenThrowsError() {
-    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900");
+    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900", "22997042956");
     CustomerModel customerModel = new CustomerModel(customerDTO);
     CustomerModel createdCustomer = customerRepository.save(customerModel);
     customerRepository.deleteById(createdCustomer.getId());
@@ -90,7 +90,7 @@ public class CustomerIntegrationTests {
 
   @Test
   void givenValidCustomerId_whenFindingCustomerById_thenSendsCustomer() {
-    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900");
+    CustomerDTO customerDTO = new CustomerDTO("name", "12345678900", "22997042956");
     CustomerModel customerModel = new CustomerModel(customerDTO);
     CustomerModel createdCustomer = customerRepository.save(customerModel);
 
