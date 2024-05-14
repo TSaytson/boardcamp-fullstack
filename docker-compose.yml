@@ -6,7 +6,7 @@ services:
     ports:
       - 5433:5432
     volumes:
-      - pgData:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     env_file:
       - ./boardcamp-java/.env
 
@@ -14,7 +14,7 @@ services:
     container_name: boardcamp_api
     build: ./boardcamp-java
     ports: 
-      - 8080:8080
+      - 5000:8080
     env_file:
       - ./boardcamp-java/.env
     depends_on:
@@ -37,5 +37,5 @@ services:
       - front
 
 volumes:
-  pgData:
+  postgres-data:
   react-volume:
