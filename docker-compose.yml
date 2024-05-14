@@ -20,22 +20,22 @@ services:
     depends_on:
       - db
 
-  # front:
-  #   build: ./boardcamp-front
-  #   volumes:
-  #     - react-volume:/var/www/html
+  front:
+    build: ./boardcamp-front
+    volumes:
+      - react-volume:/var/www/html
 
-  # nginx:
-  #   build: ./nginx
-  #   ports:
-  #     - 8080:80
-  #   volumes:
-  #     - react-volume:/var/www/html
-  #   depends_on:
-  #     - db
-  #     - api
-  #     - front
+  nginx:
+    build: ./nginx
+    ports:
+      - 8080:80
+    volumes:
+      - react-volume:/var/www/html
+    depends_on:
+      - db
+      - api
+      - front
 
 volumes:
   pgData:
-  # react-volume:
+  react-volume:

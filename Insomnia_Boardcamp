@@ -1,0 +1,287 @@
+_type: export
+__export_format: 4
+__export_date: 2024-05-14T14:36:04.798Z
+__export_source: insomnia.desktop.app:v8.6.0
+resources:
+  - _id: req_fe6dbab56f4b4372928b21b4eaefa4c2
+    parentId: fld_7013a25a52904f47adbeb6217c91e3f5
+    modified: 1715090638189
+    created: 1707514240512
+    url: "{{ _.uri }}/rentals"
+    name: /rentals
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707514571073
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7013a25a52904f47adbeb6217c91e3f5
+    parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
+    modified: 1707514237684
+    created: 1707514237684
+    name: rentals
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1707514237684
+    _type: request_group
+  - _id: wrk_b21df78670bf4ea6b5313fa3b9719064
+    parentId: null
+    modified: 1707460110442
+    created: 1707460110442
+    name: Boardcamp JAVA
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_770d860d1ba4465689b19ebf6ff207ee
+    parentId: fld_7013a25a52904f47adbeb6217c91e3f5
+    modified: 1707653665410
+    created: 1707514580873
+    url: "{{ _.uri }}/rentals"
+    name: /rentals
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"customerId" : 1,
+        	"gameId": 1,
+        	"daysRented" : 3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707512035036
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_85a967372775469393def78b33e91951
+    parentId: fld_7013a25a52904f47adbeb6217c91e3f5
+    modified: 1707653701744
+    created: 1707523289972
+    url: "{{ _.uri }}/rentals/2/return"
+    name: /rentals/:id/return
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707512034936
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_989907837dbe40ff8f5113d0aafaf963
+    parentId: fld_feeedc9ad9b44fc1ade7f325a40861ef
+    modified: 1715532049221
+    created: 1707509497127
+    url: "{{ _.uri }}/games"
+    name: /games
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707509498999
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_feeedc9ad9b44fc1ade7f325a40861ef
+    parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
+    modified: 1707509494461
+    created: 1707509494461
+    name: games
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1707509494461
+    _type: request_group
+  - _id: req_81e54a4d589e40a19da830b87dce8350
+    parentId: fld_feeedc9ad9b44fc1ade7f325a40861ef
+    modified: 1707653508480
+    created: 1707509535111
+    url: "{{ _.uri }}/games"
+    name: /games
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"name" : "Jogo da vida",
+        	"image" : "https://m.media-amazon.com/images/I/61d+ZX8M7ML._AC_UF894,1000_QL80_.jpg",
+        	"stockTotal" : 2,
+        	"pricePerDay": 1500
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707485108016.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d6ea67dd4f2b4a198ee9e058c21c91c2
+    parentId: fld_0373dfe29beb4acdbe3236106b194267
+    modified: 1715696224321
+    created: 1715692518309
+    url: "{{ _.uri }}/customers"
+    name: /customers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+    authentication: {}
+    metaSortKey: -1707460717134
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0373dfe29beb4acdbe3236106b194267
+    parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
+    modified: 1707460670296
+    created: 1707460670296
+    name: customers
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1707460670296
+    _type: request_group
+  - _id: req_55d3a105509d4eb196f880fc5c0b40fe
+    parentId: fld_0373dfe29beb4acdbe3236106b194267
+    modified: 1707653541702
+    created: 1707460116933
+    url: "{{ _.uri }}/customers/1"
+    name: /customers/:customerId
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707460717034
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0d5d603d30e4459c96605738a4029c5e
+    parentId: fld_0373dfe29beb4acdbe3236106b194267
+    modified: 1707653523545
+    created: 1707460715001
+    url: "{{ _.uri }}/customers"
+    name: /customers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Mariana",
+        	"cpf" : "12345678910"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.5.1
+    authentication: {}
+    metaSortKey: -1707460716934
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_7ee4aa8584ccb821f6607d23eccc3df313a894f1
+    parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
+    modified: 1715697302928
+    created: 1707460110444
+    name: Base Environment
+    data:
+      uri: http://18.220.148.11:80
+      DEV: http://localhost:8080
+      DEPLOY: http://18.220.148.11:80
+    dataPropertyOrder:
+      "&":
+        - uri
+        - DEV
+        - DEPLOY
+    color: null
+    isPrivate: false
+    metaSortKey: 1707460110444
+    _type: environment
+  - _id: jar_7ee4aa8584ccb821f6607d23eccc3df313a894f1
+    parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
+    modified: 1707460110445
+    created: 1707460110445
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
