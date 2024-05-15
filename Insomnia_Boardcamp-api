@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2024-05-14T21:47:15.264Z
+__export_date: 2024-05-15T15:25:54.582Z
 __export_source: insomnia.desktop.app:v8.6.0
 resources:
   - _id: req_fe6dbab56f4b4372928b21b4eaefa4c2
@@ -263,13 +263,13 @@ resources:
     _type: request
   - _id: env_7ee4aa8584ccb821f6607d23eccc3df313a894f1
     parentId: wrk_b21df78670bf4ea6b5313fa3b9719064
-    modified: 1715722520421
+    modified: 1715786688771
     created: 1707460110444
     name: Base Environment
     data:
-      uri: http://18.220.148.11:80
+      uri: http://3.138.111.230:80
       DEV: http://localhost:8080
-      DEPLOY: http://18.220.148.11:80
+      DEPLOY: http://3.138.111.230:80
     dataPropertyOrder:
       "&":
         - uri
